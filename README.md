@@ -23,15 +23,13 @@ Liquibase acts as the **database change engine**, while CI/CD pipelines control 
 ```mermaid
 flowchart TD
     Dev[Developer]
-    Git[Source Control
-(Git Repository)]
-    CI[CI/CD Pipeline
-(Jenkins / GitHub Actions / Azure DevOps)]
+    Git[Source Control<br/>Git Repository]
+    CI[CI/CD Pipeline<br/>Tekton / Harnes GitHub Actions]
     LB[Liquibase Engine]
 
     DevDB[(Dev Database)]
     QADB[(QA Database)]
-    UATDB[(UAT / Staging Database)]
+    UATDB[(UAT)]
     ProdDB[(Production Database)]
 
     Dev -->|ChangeSets / Changelog| Git
@@ -162,8 +160,8 @@ liquibase/
 
 ```mermaid
 flowchart LR
-    Secrets[Secrets Manager
-(Vault / AWS / Azure)] --> CI
+    Secrets[Secrets Manager Vault or NGC]
+    Secrets --> CI
     CI --> Liquibase
     Liquibase --> DB[(Database)]
 ```
