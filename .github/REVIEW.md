@@ -1,6 +1,6 @@
 # Review rules for database-migrations
 
-Org baseline applies (data loss and breaking schema changes are blocking). Repo-specific rules below.
+Org baseline (OWASP ASVS / NIST SSDF mapped, from the `engineering-standards` plugin) applies: data loss and breaking schema changes are blocking. Repo-specific rules below.
 
 ## Blocking
 - Modifying or deleting an already-applied changeset.
