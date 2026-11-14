@@ -2,7 +2,7 @@
 
 Liquibase CI/CD reference architecture for managing database schema changes across environments. Currently documentation only (`README.md`).
 
-Org-wide standards come from the `engineering-standards` Devin plugin; this file adds repo-specific rules. Review rules: `.github/REVIEW.md`.
+Org-wide standards come from the `engineering-ai` Devin plugin; this file adds repo-specific rules. Review rules: `.github/REVIEW.md`.
 
 ## Commands
 - No build or tests yet. TODO: add Liquibase changelogs and a `liquibase validate` / `update-sql` check when code is added.
